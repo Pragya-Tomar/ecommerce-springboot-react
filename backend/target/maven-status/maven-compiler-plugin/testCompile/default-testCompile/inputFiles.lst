@@ -1,0 +1,5 @@
+/workspaces/ecommerce-springboot-react/backend/src/test/java/com/ecommerce/app/controller/AuthControllerIT.java
+/workspaces/ecommerce-springboot-react/backend/src/test/java/com/ecommerce/app/repository/UserRepositoryTest.java
+/workspaces/ecommerce-springboot-react/backend/src/test/java/com/ecommerce/app/service/AuthServiceImplTest.java
+/workspaces/ecommerce-springboot-react/backend/src/test/java/com/ecommerce/app/service/CategoryserviceImplTest.java
+/workspaces/ecommerce-springboot-react/backend/src/test/java/com/ecommerce/app/service/ProductServiceImplTest.java

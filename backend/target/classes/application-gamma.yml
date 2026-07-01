@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    # A third, independent credential set — gamma sits between beta and prod:
+    # more stable than beta (fewer breaking schema changes expected) but not
+    # yet trusted with real user data like prod is.
+    url: ${DB_URL:jdbc:mysql://localhost:3306/ecommerce_gamma}
+    username: ${DB_USERNAME:gamma_user}
+    password: ${DB_PASSWORD:gamma_demo_pw_2026}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      # Gamma is meant to mirror prod's schema discipline — validate, not
+      # auto-update — while still logging SQL for easier bug triage.
+      ddl-auto: validate
+
+logging:
+  level:
+    com.ecommerce.app: INFO
+    org.springframework.security: INFO
+
+app:
+  error:
+    include-stacktrace: true
+  jwt:
+    secret: ${JWT_SECRET:gamma-demo-jwt-secret-key-not-for-real-use-2026}

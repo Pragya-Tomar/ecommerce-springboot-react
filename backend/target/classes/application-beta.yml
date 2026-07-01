@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    # Extra query params needed by mysql-connector-j 8.x, even for local dev:
+    # - useSSL=false: skip SSL negotiation (fine for local, never do this for real prod)
+    # - allowPublicKeyRetrieval=true: needed when SSL is off but the server still
+    #   wants to verify the client's identity via RSA public key exchange
+    # - serverTimezone=UTC: avoids a timezone mismatch error some MySQL/JDBC
+    #   version combos throw on connect
+    url: ${DB_URL:jdbc:mysql://localhost:3306/ecommerce_beta?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:beta_user}
+    password: ${DB_PASSWORD:beta_demo_pw_2026}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    com.ecommerce.app: DEBUG
+    org.springframework.security: DEBUG
+
+app:
+  error:
+    include-stacktrace: true
+  jwt:
+    secret: ${JWT_SECRET:beta-demo-jwt-secret-key-not-for-real-use-2026}
