@@ -1,0 +1,106 @@
+/* Design tokens — every color/spacing/shadow decision lives here, so
+   changing the theme later means editing one file, not hunting through
+   every component. */
+:root {
+  --color-primary: #6fa8dc;
+  --color-primary-dark: #4c86c4;
+  --color-accent: #ff6fa5;
+  --color-accent-dark: #e0538a;
+  --color-lavender: #b8a9e8;
+  --color-lavender-light: #eae6fb;
+  --color-ink: #2d2a45;
+  --color-ink-soft: #6b6885;
+  --color-bg: #faf9fd;
+  --color-surface: #ffffff;
+  --color-border: #e7e3f5;
+
+  --shadow-soft: 0 4px 20px rgba(46, 43, 85, 0.08);
+  --shadow-hover: 0 10px 30px rgba(46, 43, 85, 0.16);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+/* Visible keyboard focus everywhere — accessibility floor, not optional */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--radius-md);
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: white;
+  box-shadow: 0 4px 20px rgba(255, 111, 165, 0.35);
+}
+
+.btn-accent:hover {
+  background: var(--color-accent-dark);
+}

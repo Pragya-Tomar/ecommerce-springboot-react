@@ -1,0 +1,126 @@
+.auth-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.auth-image-panel {
+  flex: 1;
+  background: linear-gradient(150deg, var(--color-primary) 0%, var(--color-lavender) 55%, var(--color-accent) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  /* The diagonal cut is the signature detail — a plain vertical split would
+     read as a generic auth-page template; this small angle makes it feel
+     considered instead. */
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+}
+
+.auth-image-content {
+  max-width: 340px;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.auth-image-content h2 {
+  font-size: 2rem;
+  margin: 20px 0 12px;
+}
+
+.auth-image-content p {
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.auth-form-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.auth-form-wrap {
+  width: 100%;
+  max-width: 380px;
+}
+
+.auth-logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.auth-logo span {
+  color: var(--color-accent);
+}
+
+.auth-form-wrap h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  color: var(--color-ink-soft);
+  margin-bottom: 28px;
+}
+
+.auth-error {
+  background: #fde8ee;
+  color: #c02b5c;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  color: var(--color-ink-soft);
+  transition: border-color 0.15s ease;
+}
+
+.input-group:focus-within {
+  border-color: var(--color-primary);
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 24px;
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+}
+
+.auth-switch a {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .auth-image-panel { display: none; }
+}
