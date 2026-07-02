@@ -1,0 +1,5 @@
+com/ecommerce/app/controller/AuthControllerIT.class
+com/ecommerce/app/service/AuthServiceImplTest.class
+com/ecommerce/app/service/CategoryServiceImplTest.class
+com/ecommerce/app/repository/UserRepositoryTest.class
+com/ecommerce/app/service/ProductServiceImplTest.class
